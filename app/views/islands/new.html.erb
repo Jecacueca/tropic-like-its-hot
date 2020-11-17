@@ -1,0 +1,11 @@
+<h5>Create a new island</h5>
+
+<%= simple_form_for [ @island ] do |f| %>
+  <%= f.input :name %>
+  <%= f.input :description %>
+  <%= f.input :address %>
+  <%= f.input :photo, as: :file %>
+  <%= f.submit "Create" %>
+<% end %>
+
+<%= link_to 'Back', root_path %>
