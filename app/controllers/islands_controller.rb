@@ -31,6 +31,11 @@ class IslandsController < ApplicationController
     redirect_to island_path, notice: 'Island was successfully updated.'
   end
 
+  def destroy
+    @island.delete
+    redirect_to islands_path
+  end
+
   private
 
   def find_island
