@@ -1,0 +1,7 @@
+<h1>Island</h1>
+<h2><%= @island.name %></h2>
+<p><%= @island.address%></p>
+<p><%= @island.description %></p>
+<%= link_to "Update Island", edit_island_path %>
+<%= link_to "Delete Island", island_path(@island) %>
+<%= link_to "Index", islands_path %>
