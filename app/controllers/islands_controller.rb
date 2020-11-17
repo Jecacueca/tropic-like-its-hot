@@ -32,7 +32,7 @@ class IslandsController < ApplicationController
   end
 
   def destroy
-    @island.delete
+    @island.destroy
     redirect_to islands_path
   end
 
