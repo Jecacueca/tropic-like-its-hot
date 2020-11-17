@@ -3,5 +3,6 @@
 <ul>
   <% @islands.each do |island| %>
     <li><%= island.name %></li>
+  <%= link_to "Make a Booking", new_island_booking_path(island)  %>
   <% end %>
 </ul>
