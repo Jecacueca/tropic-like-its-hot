@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2020_11_17_150640) do
+ActiveRecord::Schema.define(version: 2020_11_17_153335) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -23,6 +23,7 @@ ActiveRecord::Schema.define(version: 2020_11_17_150640) do
     t.bigint "island_id", null: false
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
+    t.integer "number_of_people"
     t.index ["island_id"], name: "index_bookings_on_island_id"
     t.index ["user_id"], name: "index_bookings_on_user_id"
   end
@@ -48,7 +49,6 @@ ActiveRecord::Schema.define(version: 2020_11_17_150640) do
     t.string "phone_number"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
-    t.integer "number_of_people"
     t.index ["email"], name: "index_users_on_email", unique: true
     t.index ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true
   end
