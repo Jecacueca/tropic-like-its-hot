@@ -5,6 +5,6 @@ Rails.application.routes.draw do
   resources :islands do
     resources :bookings, only: [:new, :create]
    end
-  resources :bookings, except: [:update, :edit, :new, :create]
+  resources :bookings, except: [:new, :create]
   resources :users, only: :show
 end
