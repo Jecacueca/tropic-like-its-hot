@@ -1,11 +1,12 @@
 class IslandsController < ApplicationController
+  before_action :find_island, only: [:show, :edit, :update, :destroy]
   skip_before_action :authenticate_user!, only: :index
+
   def index
     @islands = Island.all
   end
 
   def show
-    @island = Island.find(params[:id])
   end
 
   def new
@@ -22,7 +23,19 @@ class IslandsController < ApplicationController
     end
   end
 
+  def edit
+  end
+
+  def update
+    @island.update(island_params)
+    redirect_to island_path, notice: 'Island was successfully updated.'
+  end
+
   private
+
+  def find_island
+    @island = Island.find(params[:id])
+  end
 
   def island_params
     params.require(:island).permit(:name, :address, :description)
