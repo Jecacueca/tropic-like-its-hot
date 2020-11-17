@@ -14,8 +14,9 @@ class IslandsController < ApplicationController
 
   def create
     @island = Island.new(island_params)
+    @island.user = @user
     if @island.save
-      redirect_to root_path, notice: 'Island was successfully created.'
+      redirect_to island_path(@island), notice: 'Island was successfully created.'
     else
       render :new
     end
