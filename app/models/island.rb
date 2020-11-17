@@ -3,6 +3,5 @@ class Island < ApplicationRecord
   has_many :bookings
 
   validates :address, presence: true
-  validates :description, presence: true
-  validates :description, length: { minimum: 150, to_short: "#{count} characters is the minimum length." }
+  validates :description, presence: true, length: { minimum: 150 }
 end
