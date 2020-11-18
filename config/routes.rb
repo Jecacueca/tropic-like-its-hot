@@ -5,6 +5,11 @@ Rails.application.routes.draw do
   resources :islands do
     resources :bookings, only: [:new, :create]
    end
-  resources :bookings, except: [:new, :create]
+  resources :bookings, except: [:new, :create] do
+    member do
+      get 'confirmation'
+    end
+  end
   resources :users, only: :show
+
 end
