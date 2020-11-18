@@ -1,6 +1,9 @@
 Rails.application.routes.draw do
   devise_for :users
   root to: 'pages#home'
+  # root: '/'
+
+  # get '/islands', to: "islands#index"
 
   resources :islands do
     resources :bookings, only: [:new, :create]
