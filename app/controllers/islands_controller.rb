@@ -32,7 +32,7 @@ class IslandsController < ApplicationController
   end
 
   def destroy
-    @island.delete
+    @island.destroy
     redirect_to islands_path
   end
 
@@ -43,6 +43,6 @@ class IslandsController < ApplicationController
   end
 
   def island_params
-    params.require(:island).permit(:name, :address, :description)
+    params.require(:island).permit(:name, :address, :description, :photo)
   end
 end

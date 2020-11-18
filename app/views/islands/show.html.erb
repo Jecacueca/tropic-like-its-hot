@@ -1,7 +1,10 @@
 <h1>Island</h1>
+<!-- Add if statement for photo. Set default image -->
+<%= cl_image_tag @island.photo.key, height: 300, width: 400, crop: :fill %>
 <h2><%= @island.name %></h2>
 <p><%= @island.address%></p>
 <p><%= @island.description %></p>
+<!-- Add if statement for only user to update/delete -->
 <%= link_to "Update", edit_island_path %>
 <!-- <%= link_to "Delete", island_path(@island) %> -->
 <%= link_to "Delete", island_path(@island), method: :delete, data: { confirm: "Are you sure?" } %>
