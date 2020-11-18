@@ -1,4 +1,10 @@
-<div class="navbar navbar-expand-sm navbar-light navbar-lewagon">
+
+<% if params[:controller] == 'pages' && params[:action] == 'home' %>
+  <div class="navbar navbar-expand-sm navbar-light navbar-lewagon  navbar-absolute">
+<% else %>
+  <div class="navbar navbar-expand-sm navbar-light navbar-lewagon ">
+<% end %>
+
   <%= link_to "Tropic Like It's Hot", root_path, class: "navbar-brand" %>
 
 
