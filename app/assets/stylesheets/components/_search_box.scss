@@ -1,0 +1,10 @@
+.topnav {
+  & input {
+    border-radius: 50px;
+    position: absolute;
+    height: 39px;
+    left: 50%;
+    top: 60%;
+    transform: translateX(-50%);
+  }
+}
