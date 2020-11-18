@@ -22,7 +22,7 @@ class BookingsController < ApplicationController
   end
 
   def create
-    @booking = Booking.new(bookings_params)
+    @booking = Booking.new(booking_params)
     @island = Island.find(params[:island_id])
     @booking.island = @island
     @booking.user = current_user
