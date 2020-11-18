@@ -1,5 +1,10 @@
-<h5>Create a new island</h5>
 
-<%= render "form", island: @island %>
-
-<%= link_to 'Back', root_path %>
+<div class="container island-new">
+  <div class="island-new-input">
+    <h2>Create a new island</h2>
+    <%= render "form", island: @island %>
+  </div>
+  <div class="link-island-new">
+    <%= link_to 'Back', root_path %>
+  </div>
+</div>
