@@ -3,4 +3,12 @@
   <%= cl_image_tag("pexels-photo-1536428_k65lat",
       width: 900, height: 300, crop: :fill) %></h1>
 </div>
+
+
+<%= link_to 'Go to index', islands_path  %>
+
+<!-- If I use a variable in here -->
+<!-- It has to be defined in pages controller, home action -->
+<h2>The price is <%= @price %></h2>
+
 <p>Find me in app/views/pages/home.html.erb</p>

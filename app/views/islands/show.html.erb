@@ -1,6 +1,8 @@
 <h1>Island</h1>
 <!-- Add if statement for photo. Set default image -->
-<%= cl_image_tag @island.photo.key, height: 300, width: 400, crop: :fill %>
+<% if @island.photo.attached? %>
+  <%= cl_image_tag @island.photo.key, height: 300, width: 400, crop: :fill %>
+<% end %>
 <h2><%= @island.name %></h2>
 <p><%= @island.address%></p>
 <p><%= @island.description %></p>
