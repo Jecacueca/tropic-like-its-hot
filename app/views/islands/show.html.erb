@@ -2,7 +2,11 @@
 <h2><%= @island.name %></h2>
 <p><%= @island.address%></p>
 <p><%= @island.description %></p>
+<% @island.bookings.each do |booking| %>
+  <p> Booked from <%= booking.start_date.strftime("%A, %b %d") %> to <%= booking.end_date.strftime("%A, %b %d") %> </p>
+<% end %>
 <%= link_to "Update", edit_island_path %>
 <!-- <%= link_to "Delete", island_path(@island) %> -->
 <%= link_to "Delete", island_path(@island), method: :delete, data: { confirm: "Are you sure?" } %>
-<%= link_to "Index", islands_path %>
+<%= link_to "Make a Booking", new_island_booking_path(@island) %>
+<%= link_to "View All", islands_path %>

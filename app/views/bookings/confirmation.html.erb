@@ -1,0 +1,60 @@
+<div class="container">
+  <div class="confirmation-message">
+    <h1><strong>You're going to <%= @island.name %>!</strong></h1>
+    <p><%= link_to "Make a change to the reservation", "#"  %> </p>
+  </div>
+
+  <div class="checkout">
+    <div class="checkout-details">
+
+      <div class="check-guests">
+        <div>
+          <p style="font-size: 24px"><strong><%= @island.bookings.last.number_of_people %> Guests</strong></p>
+          <p>Share the trip with your guests</p>
+        </div>
+        <div id="manage-guests">
+          <a class="btn btn-primary btn-lg" href="#">Manage Guests</a>
+        </div>
+      </div>
+
+      <div class="check-dates">
+        <div class="check-in">
+          <p style="font-size: 24px"><strong>Check In</strong></p>
+        </div>
+        <div class="check-in-details">
+          <p><%= @island.bookings.last.start_date.strftime("%A, %b %d") %></p>
+        </div>
+        <div class="checkout">
+          <p style="font-size: 24px"><strong>Check Out</strong></p>
+        </div>
+        <div class="checkout-info">
+          <p> <%= @island.bookings.last.end_date.strftime("%A, %b %d") %></p>
+        </div>
+      </div>
+
+      <div class="address">
+        <div class="address-detail">
+          <p style="font-size: 24px"><strong>Address</strong></p>
+        </div>
+        <div class="address-listing">
+          <p><strong> <%= @island.name %> </strong></p>
+          <p><%= @island.address %> </p>
+          <%= link_to "View Listing", island_path(@island)  %>
+        </div>
+      </div>
+    </div>
+
+    <div class="host-details">
+      <div class="host-thumbnail-checkout">
+        <img src="https://kitt.lewagon.com/placeholder/users/ssaunier" class="avatar" id ="avatar-host-size" alt="">
+      </div>
+      <p>Your host, <strong>Sebastien</strong></p>
+      <p style="font-size: 16px" class="text-center">Hi, Thanks for booking my Island 🏝. </p><p style="font-size: 16px" class="text-center">I can't wait to host you here. I'll be sending some more
+      info closer to your booking.In the meantime, if you have any questions please send me a message below!</p>
+      <a class="btn btn-primary btn-lg" href="#"> Message Host</a>
+      <%= link_to "Send or request money", "#" %>
+    </div>
+  </div>
+</div>
+
+

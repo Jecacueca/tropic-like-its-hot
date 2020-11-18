@@ -4,6 +4,7 @@ class Island < ApplicationRecord
   has_many :bookings
 
   validates :name, presence: true
+  validates :price, presence: true
   validates :address, presence: true
   validates :description, presence: true, length: { minimum: 150 }
 end
