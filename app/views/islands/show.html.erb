@@ -45,3 +45,7 @@
       </a>
   </div>
 </div>
+
+<% @island.bookings.each do |booking| %>
+  <p> Booked from <%= booking.start_date.strftime("%A, %b %d") %> to <%= booking.end_date.strftime("%A, %b %d") %> </p>
+<% end %>
