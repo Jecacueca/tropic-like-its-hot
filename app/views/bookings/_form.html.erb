@@ -1,9 +1,7 @@
-<div class="container mt-5">
-  <h1>Booking Form</h1>
+
   <%= simple_form_for [island, booking ] do |f| %>
   <%= f.input :start_date %>
   <%= f.input :end_date %>
   <%= f.input :number_of_people %>
-  <%= f.submit %>
+  <%= f.submit "Book", class: "btn btn-primary btn-lg" %>
   <% end %>
-</div>

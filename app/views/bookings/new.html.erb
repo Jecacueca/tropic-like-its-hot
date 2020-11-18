@@ -1,1 +1,11 @@
-<%= render 'form', island: @island, booking: @booking %>
+
+
+<div class="container island-new">
+  <div class="island-new-input">
+    <h2>Book Your Island</h2>
+    <%= render 'form', island: @island, booking: @booking %>
+  </div>
+  <div class="link-island-new">
+    <%= link_to 'Back', root_path %>
+  </div>
+</div>
