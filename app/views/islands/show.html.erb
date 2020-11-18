@@ -1,18 +1,51 @@
-<h1>Island</h1>
-<!-- Add if statement for photo. Set default image -->
-<%= cl_image_tag @island.photo.key, height: 300, width: 400, crop: :fill %>
-<h2><%= @island.name %></h2>
-<p><%= @island.address%></p>
-<p><%= @island.description %></p>
+<div class="show-container">
+  <div class="island-info">
+    <h2><%= @island.name %></h2>
+    <h3><%= @island.address%></h3>
+    <div id="island-description">
+      <p><%= @island.description %></p>
+    </div>
+  <!-- Add if statement for only user to update/delete -->
+  <% if current_user == @island.user %>
+    <%= link_to "Update", edit_island_path, class:"btn btn-primary" %>
+    <%= link_to "Delete", island_path(@island), class:"btn btn-primary", method: :delete, data: { confirm: "Are you sure?" } %>
+<!--     <%= link_to "Back", islands_path %> -->
+  <% else %>
+  <!--   <%= link_to "Back", islands_path %> -->
+    <%= link_to "Make a Booking", new_island_booking_path(@island), class:"btn btn-primary"%>
+  <% end %>
+  </div>
+
+  <!-- Add if statement for photo. Set default image -->
+  <div id="showpage-carousel">
+    <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
+      <ol class="carousel-indicators">
+        <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
+        <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
+        <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+      </ol>
+      <div class="carousel-inner">
+        <% if @island.photos.attached? %>
+          <% @island.photos.each_with_index do |photo, index| %>
+            <div class="carousel-item <%= index == 0 ? "active" : "" %>">
+              <%= cl_image_tag photo.key, class: "d-block w-100", height: 500, crop: :pad %>
+            </div>
+          <% end %>
+        <% else %>
+          <%= image_tag "https://images.unsplash.com/photo-1545579133-99bb5ab189bd?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1950&q=80", class: "d-block w-100" %>
+        <% end %>
+      </div>
+      <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="sr-only">Previous</span>
+      </a>
+      <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="sr-only">Next</span>
+      </a>
+  </div>
+</div>
 
 <% @island.bookings.each do |booking| %>
   <p> Booked from <%= booking.start_date.strftime("%A, %b %d") %> to <%= booking.end_date.strftime("%A, %b %d") %> </p>
 <% end %>
-
-<!-- Add if statement for only user to update/delete -->
-
-<%= link_to "Update", edit_island_path %>
-<!-- <%= link_to "Delete", island_path(@island) %> -->
-<%= link_to "Delete", island_path(@island), method: :delete, data: { confirm: "Are you sure?" } %>
-<%= link_to "Make a Booking", new_island_booking_path(@island) %>
-<%= link_to "View All", islands_path %>
