@@ -1,10 +1,5 @@
 <h5>Update this island</h5>
 
-<%= simple_form_for [ @island ] do |f| %>
-  <%= f.input :name %>
-  <%= f.input :description %>
-  <%= f.input :address %>
-  <%= f.submit "Update" %>
-<% end %>
+<%= render "form", island: @island %>
 
 <%= link_to 'Back', island_path %>
