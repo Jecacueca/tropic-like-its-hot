@@ -13,6 +13,6 @@ Rails.application.routes.draw do
       get 'confirmation'
     end
   end
-  resources :users, only: :show
+  get 'profile', action: :show, controller: 'users'
 
 end
