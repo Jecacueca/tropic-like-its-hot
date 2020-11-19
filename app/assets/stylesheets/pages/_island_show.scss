@@ -19,6 +19,12 @@ p {
   font-weight: 100;
 }
 
+#image {
+  object-fit: cover;
+  height: 300px;
+  width: 350px;
+}
+
 .show-container {
   margin: 30px 50px;
 }
