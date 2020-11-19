@@ -14,7 +14,7 @@ class IslandsController < ApplicationController
         lat: island.latitude,
         lng: island.longitude
       }
-
+    end
   end
 
   def show

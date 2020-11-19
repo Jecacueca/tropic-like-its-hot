@@ -9,6 +9,8 @@ h1 {
 
 #showing-number {
   letter-spacing: 9px;
+  margin: 10px 0px 24px 0px;
+  font-weight: 900;
 }
 
 .total-page-index {
@@ -18,13 +20,15 @@ h1 {
 
 .search-number {
   display: flex;
-  justify-content: center;
   align-items: center;
+  flex-direction: column;
 }
 
 .information-index {
   display:flex;
-  margin-top: 35px;
+  margin-top: 16px;
+  padding-top: 30px;
+  border-top: 4px solid #E7E7EA;
 }
 
 .listings-container {
@@ -43,3 +47,33 @@ h1 {
   position: sticky;
   top: 130px;
 }
+
+.form-search {
+  border: 1px solid #E7E7EA;
+  padding: 12px 205px 12px 16px;
+  background-color: transparent;
+  font-style: italic;
+  font-family: "Libre Franklin", "sans-serif";
+  letter-spacing: 2px;
+  margin-right: -6px;
+  border-top-left-radius: 5px;
+  border-bottom-left-radius: 5px;
+}
+
+.form-search:focus {
+  border: 3px solid #E7E7EA;
+  text-decoration: none;
+}
+
+.search-bar-index {
+  margin-bottom: 16px;
+}
+
+.island-image-icon img{
+  height: 36px;
+  width: 36px;
+  margin-right: 16px;
+}
+
+
+

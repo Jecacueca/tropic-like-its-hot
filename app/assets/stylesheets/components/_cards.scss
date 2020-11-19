@@ -42,6 +42,7 @@ a:hover{
   font-family: "Libre Franklin", "sans-serif";
   font-size: 18px;
   letter-spacing: 1px;
+  margin-bottom:0px;
 }
 
 .search-number {
@@ -74,7 +75,7 @@ a:hover{
 .island-details {
   display: flex;
   align-items: center;
-  margin-top: 8px;
+  margin: 8px 0px 16px 0px;
 }
 
 .island-name-card {
@@ -89,6 +90,7 @@ a:hover{
 .island-price-card h4 {
   font-size: 17px;
   color: #8E004C;
+  margin-bottom: 4px;
 }
 
 
