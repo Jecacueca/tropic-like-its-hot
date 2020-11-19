@@ -4,7 +4,7 @@
     <%= form_tag islands_path, method: :get do %>
     <%= text_field_tag :query,
       params[:query],
-      class: "form control",
+      class: "form_control",
       placeholder: "Find an island..."
     %>
     <%= submit_tag "Search", class: "btn btn-primary" %>

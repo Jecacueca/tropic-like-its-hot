@@ -1,10 +1,15 @@
-.topnav {
-  & input {
-    border-radius: 50px;
-    position: absolute;
-    height: 39px;
-    left: 50%;
-    top: 60%;
-    transform: translateX(-50%);
-  }
+.background input{
+    width: 100%;
+    border: 1px solid hsla(0,0%,100%,.5);
+    background: none;
+    height: 64px;
+    color: white;
+    padding-top: 15px;
+    padding-right: 106px!important;
+    padding-left: 26px!important;
+    font-size: 1.6rem!important;
+    font-style: italic;
+    width: 300px;
+    top: 500pc;
+    left: center;
 }
