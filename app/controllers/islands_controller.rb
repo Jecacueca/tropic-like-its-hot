@@ -17,6 +17,10 @@ class IslandsController < ApplicationController
     end
   end
 
+  def home
+    @island = Island.all
+  end
+
   def show
     @booking = Booking.new
   end

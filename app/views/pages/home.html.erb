@@ -1,42 +1,90 @@
-<<<<<<< HEAD
-<!-- class="background" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url('https://res.cloudinary.com/dh6gdchfj/image/upload/v1605701092/pexels-photo-1139040_ckwk85.jpg')"> -->
-
-<!--     <h1 id='header' >RENT YOUR PRIVATE ISLAND</h1>
-    <div id="typed-strings" class="typed-color">
-      <p>FOR YOUR NEXT HOLIDAY, RENT A HOUSE</p>
-      <p>FOR YOUR NEXT HOLIDAY, RENT A VILLA</p>
-      <p>FOR YOUR NEXT HOLIDAY, RENT AN <span style="text-decoration: underline">ISLAND</span></p>
+<div class="home-page-container">
+  <div class="banner">
+    <div class="banner-content">
+      <div>
+        <h1>TROPIC LIKE IT'S HOT</h1>
+      </div>
+        <div id="typed-strings" class="typed-color">
+          <p>RENT A HOUSE...?</p>
+          <p>RENT A VILLA...?</p>
+          <p>RENT AN <span style="text-decoration: underline">ISLAND</span></p>
+        </div>
+      <span id="typed"></span>
+      <div class="search-bar">
+        <%= form_tag islands_path, method: :get do %>
+          <%= text_field_tag :query,
+          params[:query],
+          class: "form_control form-search form-search-colour", id: "form-search-home",
+          placeholder: "Find your next island..."
+          %>
+          <%= submit_tag "Search", class: "btn-search-home" %>
+        <% end %>
+      </div>
     </div>
-    <span id="typed"></span>
-    <input type="text" placeholder="Search.."> -->
-
-
-<div class="banner">
-  <div class="banner-content">
-    <div>
-      <h1>RENT YOUR PRIVATE ISLAND</h1>
-    </div>
-    <div id="typed-strings" class="typed-color">
-      <p>RENT A HOUSE..?</p>
-      <p>RENT A VILLA...?</p>
-      <p>RENT AN <span style="text-decoration: underline">ISLAND!</span></p>
-    </div>
-    <span id="typed"></span>
-    <div class="search-bar">
-      <input class="form-control" type="text" placeholder="Search" aria-label="Search">
-    </div>
-=======
-<div>
-  <div class="background" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url('https://res.cloudinary.com/dh6gdchfj/image/upload/v1605701092/pexels-photo-1139040_ckwk85.jpg')">
-    <h1 id='header' >RENT YOUR PRIVATE ISLAND</h1>
-    <%= form_tag islands_path, method: :get do %>
-    <%= text_field_tag :query,
-      params[:query],
-      class: "form_control",
-      placeholder: "Find an island..."
-    %>
-    <%= submit_tag "Search", class: "btn btn-primary" %>
-    <% end %>
->>>>>>> master
   </div>
+
+  <div class="featured-islands">
+    <div class="fave-islands">
+      <h2>OUR FAVOURITE ISLANDS</h2>
+    </div>
+
+    <div class="island-cards">
+      <div class="fi-card">
+        <div class="fi-image">
+          <img src="https://images.pexels.com/photos/1536428/pexels-photo-1536428.jpeg?auto=compress&cs=tinysrgb&h=750&w=1260" alt="">
+        </div>
+        <div class="fi-text">
+          <h2 class="fi-text-js text-center">KOH LIPE</h2>
+        </div>
+      </div>
+
+      <div class="fi-card">
+        <div class="fi-image">
+          <img src="https://images.unsplash.com/photo-1529333241880-9558d5e5e064?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=716&q=80" alt="">
+        </div>
+        <div class="fi-text">
+          <h2 class="fi-text-js text-center">CUBA</h2>
+        </div>
+      </div>
+
+      <div class="fi-card">
+        <div class="fi-image">
+          <img class="image-js" src="https://images.unsplash.com/photo-1529420705456-5c7e04dd043d?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=800&q=80" alt="">
+        </div>
+        <div class="fi-text">
+          <h2 class="fi-text-js text-center">KOH TAO</h2>
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+  <div class="footer">
+    <div class="footer-links">
+      <a href="#"><i class="fab fa-github"></i></a>
+      <a href="#"><i class="fab fa-instagram"></i></a>
+      <a href="#"><i class="fab fa-facebook"></i></a>
+      <a href="#"><i class="fab fa-twitter"></i></a>
+      <a href="#"><i class="fab fa-linkedin"></i></a>
+    </div>
+    <div class="footer-copyright">
+      This footer is made with <i class="fas fa-heart"></i> at Le Wagon
+    </div>
+  </div>
+
 </div>
+
+<!-- <script>
+  const fiCard = document.querySelectorAll(".fi-card")
+  fiCard.forEach(selected => {
+    selected.addEventListener('mouseenter', (event) => {
+      event.srcElement.lastElementChild.firstChild.nextSibling.classList.add("opacity")
+    })
+
+
+    selected.addEventListener('mouseleave', (event) => {
+      event.srcElement.lastElementChild.firstChild.nextSibling.classList.remove("opacity")
+    })
+  })
+</script>
+ -->
