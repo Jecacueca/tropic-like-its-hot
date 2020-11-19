@@ -1,8 +1,8 @@
-
-
-  <!-- Add if statement for photo. Set default image -->
-
 <div class="container">
+  <div class="title">
+    <h2><%= @island.name.upcase %></h2>
+    <h3><%= @island.address.upcase%></h3>
+  </div>
   <div id="showpage-carousel">
     <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
       <ol class="carousel-indicators">
@@ -31,14 +31,11 @@
       </a>
   </div>
   <div class="row">
-    <div class="col">
+    <div class="col-7">
       <div class="island-info">
-        <h2><%= @island.name.upcase %></h2>
-        <h3><%= @island.address.upcase%></h3>
-        <div id="island-description">
-          <p><%= @island.description %></p>
-          <h4> | £<%= @island.price %>/DAY |</h4>
-        </div>
+        <h3>DESCRIPTION</h3>
+        <p id="island-description"><%= @island.description %></p>
+        <h4> | £<%= @island.price %>/NIGHT |</h4>
       <!-- Add if statement for only user to update/delete -->
       <% if current_user == @island.user %>
         <%= link_to "Update", edit_island_path, class:"btn btn-primary" %>
@@ -46,13 +43,12 @@
     <!--     <%= link_to "Back", islands_path %> -->
       <% else %>
       <!--   <%= link_to "Back", islands_path %> -->
-        <%= link_to "Make a Booking", new_island_booking_path(@island), class:"btn btn-primary"%>
       <% end %>
       </div>
     </div>
-    <div class="col">
+    <div class="col-5">
       <div class="booking-form">
-        <h3>MAKE A BOOKING</h3>
+        <h3>BOOKING</h3>
         <%= render 'bookings/form', island: @island, booking: @booking %>
       </div>
     </div>

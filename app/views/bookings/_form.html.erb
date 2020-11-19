@@ -1,7 +1,7 @@
 
   <%= simple_form_for [island, booking ] do |f| %>
-  <%= f.input :start_date %>
-  <%= f.input :end_date %>
-  <%= f.input :number_of_people %>
-  <%= f.submit "Book", class: "btn btn-primary btn-lg" %>
+  <%= f.input :start_date, as: :date, html5: true %>
+  <%= f.input :end_date, as: :date, html5: true %>
+  <%= f.input :number_of_people, input_html: { class: "inline-element" } %>
+  <%= f.submit "Book", class: "btn btn-primary btn-lg inline-element" %>
   <% end %>
