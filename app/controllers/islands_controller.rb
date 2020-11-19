@@ -3,17 +3,22 @@ class IslandsController < ApplicationController
   skip_before_action :authenticate_user!, only: :index
 
   def index
-    @islands = Island.all
+    if params[:query]
+      @islands = Island.search_by_name_description(params[:query])
+    else
+      @islands = Island.all
+    end
 
     @markers = @islands.geocoded.map do |island|
       {
         lat: island.latitude,
         lng: island.longitude
       }
-    end
+
   end
 
   def show
+    @booking = Booking.new
   end
 
   def new

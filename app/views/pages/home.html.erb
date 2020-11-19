@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 <!-- class="background" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url('https://res.cloudinary.com/dh6gdchfj/image/upload/v1605701092/pexels-photo-1139040_ckwk85.jpg')"> -->
 
 <!--     <h1 id='header' >RENT YOUR PRIVATE ISLAND</h1>
@@ -24,5 +25,18 @@
     <div class="search-bar">
       <input class="form-control" type="text" placeholder="Search" aria-label="Search">
     </div>
+=======
+<div>
+  <div class="background" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url('https://res.cloudinary.com/dh6gdchfj/image/upload/v1605701092/pexels-photo-1139040_ckwk85.jpg')">
+    <h1 id='header' >RENT YOUR PRIVATE ISLAND</h1>
+    <%= form_tag islands_path, method: :get do %>
+    <%= text_field_tag :query,
+      params[:query],
+      class: "form_control",
+      placeholder: "Find an island..."
+    %>
+    <%= submit_tag "Search", class: "btn btn-primary" %>
+    <% end %>
+>>>>>>> master
   </div>
 </div>
