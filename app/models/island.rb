@@ -7,4 +7,7 @@ class Island < ApplicationRecord
   validates :price, presence: true
   validates :address, presence: true
   validates :description, presence: true, length: { minimum: 150 }
+
+  include PgSearch::Model
+  pg_search_scope :search_by_name_description, against: [:name, :description], using: { tsearch: { prefix: true } }
 end
