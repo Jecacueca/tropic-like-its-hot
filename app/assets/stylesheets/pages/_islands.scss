@@ -58,12 +58,9 @@ h1 {
   margin-right: -6px;
   border-top-left-radius: 5px;
   border-bottom-left-radius: 5px;
+  outline: none;
 }
 
-.form-search:focus {
-  border: 3px solid #E7E7EA;
-  text-decoration: none;
-}
 
 .search-bar-index {
   margin-bottom: 16px;
@@ -73,6 +70,10 @@ h1 {
   height: 36px;
   width: 36px;
   margin-right: 16px;
+}
+
+::placeholder {
+outline: none;
 }
 
 

@@ -15,7 +15,7 @@
           <%= text_field_tag :query,
           params[:query],
           class: "form_control form-search form-search-colour", id: "form-search-home",
-          placeholder: "Find your next island..."
+          placeholder: "Search for Islands..."
           %>
           <%= submit_tag "Search", class: "btn-search-home" %>
         <% end %>
@@ -58,33 +58,4 @@
     </div>
 
   </div>
-
-  <div class="footer">
-    <div class="footer-links">
-      <a href="#"><i class="fab fa-github"></i></a>
-      <a href="#"><i class="fab fa-instagram"></i></a>
-      <a href="#"><i class="fab fa-facebook"></i></a>
-      <a href="#"><i class="fab fa-twitter"></i></a>
-      <a href="#"><i class="fab fa-linkedin"></i></a>
-    </div>
-    <div class="footer-copyright">
-      This footer is made with <i class="fas fa-heart"></i> at Le Wagon
-    </div>
-  </div>
-
 </div>
-
-<!-- <script>
-  const fiCard = document.querySelectorAll(".fi-card")
-  fiCard.forEach(selected => {
-    selected.addEventListener('mouseenter', (event) => {
-      event.srcElement.lastElementChild.firstChild.nextSibling.classList.add("opacity")
-    })
-
-
-    selected.addEventListener('mouseleave', (event) => {
-      event.srcElement.lastElementChild.firstChild.nextSibling.classList.remove("opacity")
-    })
-  })
-</script>
- -->
