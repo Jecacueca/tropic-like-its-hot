@@ -8,6 +8,13 @@ class IslandsController < ApplicationController
     else
       @islands = Island.all
     end
+
+    @markers = @islands.geocoded.map do |island|
+      {
+        lat: island.latitude,
+        lng: island.longitude
+      }
+    end
   end
 
   def show
