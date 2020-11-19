@@ -1,0 +1,45 @@
+body{
+background-color: #FAFAFA;
+}
+
+h1 {
+  font-family: "Montserrat", "sans-serif";
+  letter-spacing: 2px;
+}
+
+#showing-number {
+  letter-spacing: 9px;
+}
+
+.total-page-index {
+  width: 95vw;
+  margin: 16px auto;
+}
+
+.search-number {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.information-index {
+  display:flex;
+  margin-top: 35px;
+}
+
+.listings-container {
+  width: 50%;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+
+.map-index {
+  width: 45%;
+}
+
+#map {
+  height: 100vh;
+  position: sticky;
+  top: 130px;
+}

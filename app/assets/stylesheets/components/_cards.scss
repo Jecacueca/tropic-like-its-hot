@@ -1,19 +1,102 @@
-.cards-flex {
-  display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
+// .cards-flex {
+//   display: grid;
+//   grid-template-columns: 1fr 1fr 1fr;
+// }
+
+// .card-island {
+//   margin: 16px;
+//   background: red;
+//   padding: 50px 0;
+//   text-align: center;
+//   background-size: cover;
+//   background-position: center;
+//   color: white;
+//   text-shadow: 2px 2px 3px rgba(0,0,0,0.2);
+//   a {
+//     color: white;
+//     font-size: 26px;
+//   }
+// }
+
+.total-page-index h1, h2, h3, h4 {
+  font-family: "Montserrat", "sans-serif";
+  letter-spacing: 4px;
 }
 
-.card-island {
-  margin: 16px;
-  background: red;
-  padding: 50px 0;
-  text-align: center;
-  background-size: cover;
-  background-position: center;
-  color: white;
-  text-shadow: 2px 2px 3px rgba(0,0,0,0.2);
-  a {
-    color: white;
-    font-size: 26px;
-  }
+.island-name-link {
+  font-family: "Montserrat", "sans-serif";
+  letter-spacing: 4px;
+  font-size: 26px;
 }
+
+a {
+  color: #121730;
+  font-size: 26px;
+}
+
+a:hover{
+  text-decoration: none;
+}
+
+.total-page-index p {
+  font-family: "Libre Franklin", "sans-serif";
+  font-size: 18px;
+  letter-spacing: 1px;
+}
+
+.search-number {
+  margin-bottom: 10px;
+}
+
+.big-listing {
+  width: 80%;
+  padding-bottom: 8px;
+  border-bottom: 4px solid #E7E7EA;
+  margin-bottom: 40px;
+}
+
+.listing-image {
+  display: flex;
+  justify-content: center;
+}
+
+.listing-image img {
+  width: 100%;
+  object-fit: cover;
+}
+
+.name-price {
+  display: flex;
+  margin-top: 20px;
+  align-items: center;
+}
+
+.island-details {
+  display: flex;
+  align-items: center;
+  margin-top: 8px;
+}
+
+.island-name-card {
+  margin-right: 32px;
+}
+
+.island-name-card h2 {
+  font-family: "Montserrat", "sans-serif";
+  letter-spacing: 4px;
+}
+
+.island-price-card h4 {
+  font-size: 17px;
+  color: #8E004C;
+}
+
+
+
+
+
+
+
+
+
+
