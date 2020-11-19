@@ -1,3 +1,18 @@
 #button {
   background-color: #007B83;
 }
+
+.btn-search {
+  border: 1px solid #E7E7EA;
+  padding: 12px 19px;
+  background-color: transparent;
+  font-style: italic;
+  font-family: "Libre Franklin", "sans-serif";
+  letter-spacing: 2px;
+  border-top-right-radius: 5px;
+  border-bottom-right-radius: 5px;
+}
+
+.btn-search:hover {
+  border: 1px solid #8E004C;
+}
