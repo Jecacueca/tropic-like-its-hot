@@ -5,7 +5,6 @@ class IslandsController < ApplicationController
   def index
     if params[:query]
       @islands = Island.search_by_name_description(params[:query])
-
     else
       @islands = Island.all
     end
