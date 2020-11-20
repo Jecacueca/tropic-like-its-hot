@@ -8,10 +8,10 @@
       <%= form_tag islands_path, method: :get do %>
       <%= text_field_tag :query,
       params[:query],
-      class: "form control form-search",
+      class: "form control form-search", id: "form-placeholder",
       placeholder: "Find an island..."
       %>
-      <%= submit_tag "Search", class: "btn-search" %>
+      <%= submit_tag "Search", class: "btn-search btn-search-index" %>
       <% end %>
     </div>
   </div>
@@ -39,11 +39,11 @@
           </div>
 
           <div class="island-details">
-            <div class="island-image-icon">
-              <img src="https://i.pinimg.com/originals/74/b4/b6/74b4b6e3299c72aa67967f4d2fd7936c.png" alt="">
-            </div>
             <div>
               <p><%= island.description[0, 150] %></p>
+            </div>
+            <div class="island-image-icon">
+              <img src="https://i.pinimg.com/originals/74/b4/b6/74b4b6e3299c72aa67967f4d2fd7936c.png" alt="">
             </div>
           </div>
         </div>

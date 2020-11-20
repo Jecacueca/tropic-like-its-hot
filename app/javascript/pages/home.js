@@ -23,5 +23,10 @@ const cardAnimation = () => {
   })
 }
 
+const revealCards = () => {
+  ScrollReveal().reveal('.island-cards', {delay: 300});
+}
+
 export { typedText }
 export { cardAnimation }
+export { revealCards }

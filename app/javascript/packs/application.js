@@ -29,6 +29,7 @@ import "bootstrap";
 // import { initSelect2 } from '../components/init_select2';
 import { typedText } from '../pages/home'
 import { cardAnimation } from '../pages/home'
+import { revealCards } from '../pages/home'
 import { initMapbox } from '../plugins/init_mapbox';
 
 
@@ -37,5 +38,6 @@ document.addEventListener('turbolinks:load', () => {
   // initSelect2();
   typedText();
   cardAnimation();
+  revealCards();
   initMapbox();
 });
