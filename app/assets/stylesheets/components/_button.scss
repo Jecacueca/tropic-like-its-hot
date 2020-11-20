@@ -3,7 +3,7 @@
 }
 
 .btn-search {
-  border: 1px solid #E7E7EA;
+  border: 1px solid #121730;
   padding: 12px 19px;
   background-color: transparent;
   font-style: italic;
@@ -11,8 +11,37 @@
   letter-spacing: 2px;
   border-top-right-radius: 5px;
   border-bottom-right-radius: 5px;
+  transition: 0.5s ease;
 }
 
 .btn-search:hover {
-  border: 1px solid #8E004C;
+  background-color: #121730;
+  border: 1px solid #121730;
+  transition: all 0.5s ease;
+  font-weight: bold;
+  color: white;
+}
+
+.btn-search-home{
+  color: #121730;
+  border: 3px solid white;
+  background-color: white;
+  padding: 12px 19px;
+  font-style: italic;
+  font-family: "Libre Franklin", "sans-serif";
+  letter-spacing: 2px;
+  border-top-right-radius: 5px;
+  border-bottom-right-radius: 5px;
+  transition: 0.5s ease;
+}
+
+.btn-search-home:hover{
+  background-color: #EBEBEB;
+  border: 3px solid #EBEBEB;
+}
+
+#form-search-home{
+  color: white;
+  border: 3px solid white;
+  outline: none;
 }

@@ -4,16 +4,16 @@
 <% else %>
   <div class="navbar navbar-expand-sm navbar-light navbar-lewagon ">
 <% end %>
-<!--   <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-    <span class="navbar-toggler-icon"></span>
-  </button>
- -->
+
+  <div class="home-title">
+  <%= link_to "TROPIC LIKE IT'S HOT", root_path, class: "navbar-brand", id:"home-buton" %>
+  </div>
+
+
+
   <div class="collapse navbar-collapse" id="navbarSupportedContent">
-    <ul class="navbar-nav mr-auto">
+    <ul class="navbar-nav">
       <% if user_signed_in? %>
-       <li class="nav-item">
-          <%= link_to "HOME", root_path, class: "nav-link" %>
-        </li>
         <li class="nav-item">
           <%= link_to "VIEW ALL", islands_path, class: "nav-link" %>
         </li>
