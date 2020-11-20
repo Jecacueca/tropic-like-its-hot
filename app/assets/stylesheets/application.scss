@@ -17,3 +17,7 @@
 @import "pages/user_show";
 
 @import "pages/login";
+
+.main-content {
+  min-height: calc(100vh - 138px);
+}

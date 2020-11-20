@@ -9,6 +9,8 @@ body {
   box-shadow: 0 0 15px rgba(0,0,0,0.2);
   display: flex;
   align-items: center;
+  text-align: left;
+  margin-bottom: 10px;
 }
 
 .profile-card img {
@@ -29,10 +31,27 @@ body {
   margin-top: 8px;
 }
 
-.profile-card .card-product-infos {
-  padding: 16px;
+.card-product-infos {
+  padding: 18px;
 }
 
 .heading {
   text-align: center;
+}
+
+.listings h3 {
+  margin-top: 20px;
+}
+
+h3 {
+  // text-align: left;
+}
+.listings, .bookings {
+  margin-top: 50px;
+}
+
+.heading {
+  border-bottom: 4px solid #E7E7EA;
+  margin: 0 215px;
+  padding-bottom: 14px;
 }

@@ -15,7 +15,7 @@ h3 {
 }
 
 p, .booking-form {
-  font-size: 14px;
+  font-size: 16px;
   font-family: 'Libre Franklin', sans-serif;
   font-weight: 100;
 }
@@ -30,8 +30,8 @@ body {
 
 #image {
   object-fit: cover;
-  height: 600px;
-  width: 300px;
+  height: 400px;
+  width: 200px;
 }
 
 .container {
@@ -52,7 +52,7 @@ body {
 
 #island-description {
   text-align: justify;
-  line-height: 18px;
+  line-height: 24px;
 }
 
 .title {
@@ -61,7 +61,7 @@ body {
 
 form.new_booking {
   input {
-    font-size: 10px;
+    font-size: 14px;
   }
 }
 
