@@ -38,8 +38,8 @@
         <h4> | £<%= @island.price %>/NIGHT |</h4>
       <!-- Add if statement for only user to update/delete -->
       <% if current_user == @island.user %>
-        <%= link_to "Update", edit_island_path, class:"btn btn-primary" %>
-        <%= link_to "Delete", island_path(@island), class:"btn btn-primary", method: :delete, data: { confirm: "Are you sure?" } %>
+        <%= link_to "Update", edit_island_path, class:"btn-search btn-search-index button-radius" %>
+        <%= link_to "Delete", island_path(@island), class:"btn-search btn-search-index button-radius", method: :delete, data: { confirm: "Are you sure?" } %>
     <!--     <%= link_to "Back", islands_path %> -->
       <% else %>
       <!--   <%= link_to "Back", islands_path %> -->
