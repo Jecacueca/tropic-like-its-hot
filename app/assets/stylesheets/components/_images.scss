@@ -1,0 +1,17 @@
+.thumbnail-image {
+  width: 200px;
+  height: 150px;
+  object-fit: cover;
+  margin-top: 15px;
+  box-shadow: 0 0px 55px rgba(0, 0, 0, 0.3);
+}
+
+.thumbnail-image img {
+  width: 200px;
+  height: 150px;
+  object-fit: cover;
+  margin-top: 15px;
+  box-shadow: 0 0px 55px rgba(0, 0, 0, 0.3);
+  text-decoration: none;
+  outline: none;
+}
