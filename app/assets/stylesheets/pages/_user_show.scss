@@ -1,3 +1,7 @@
+body {
+  background-color: white;
+}
+
 .profile-card {
   overflow: hidden;
   height: 100px;
@@ -32,7 +36,6 @@
 }
 
 .row {
-  grid-gap: 34px;
   justify-content: center;
   margin-top: 0px;
 }
