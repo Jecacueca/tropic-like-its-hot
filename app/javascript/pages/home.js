@@ -1,12 +1,18 @@
 
 const typedText = () => {
- var typed = new Typed('#typed', {
-    stringsElement: '#typed-strings',
-    smartBackspace: true,
-    typeSpeed: 80,
-    backSpeed: 40,
-    loop: true,
-  });
+  const typedjs = document.getElementById('typed')
+  console.log(typedjs)
+  const typedStringsjs = document.getElementById('typed-strings')
+  console.log(typedStringsjs)
+  if (typedjs && typedStringsjs) {
+   var typed = new Typed('#typed', {
+      stringsElement: '#typed-strings',
+      smartBackspace: true,
+      typeSpeed: 80,
+      backSpeed: 40,
+      loop: true,
+    });
+   }
  }
 
 const cardAnimation = () => {
