@@ -14,11 +14,11 @@
             <% end %>
       </div>
       <div class="booking-details">
-        <h3>Booking details</h3>
+        <h3>BOOKING DETAILS</h3>
       </div>
       <div class="address">
         <div class="address-detail">
-          <p style="font-size: 14px"><strong>Address</strong></p>
+          <p style="font-size: 18px"><strong>ADDRESS</strong></p>
         </div>
         <div class="address-listing">
           <p><%= @island.address %> </p>
@@ -26,25 +26,25 @@
         </div>
       </div>
       <div class="check-dates">
-        <div class="title">
-          <p style="font-size: 14px"><strong>Check In</strong></p>
+        <div class="check-in-title">
+          <p style="font-size: 18px;margin-bottom: 13px;"><strong>CHECK IN</strong></p>
         </div>
         <div class="check-in-details">
           <p><%= @island.bookings.last.start_date.strftime("%A, %b %d") %></p>
         </div>
         <div class="checkout">
-          <p style="font-size: 14px"><strong>Check Out</strong></p>
+          <p style="font-size: 18px;margin-bottom: 13px;"><strong>CHECK IN</strong></p>
         </div>
         <div class="checkout-info">
           <p> <%= @island.bookings.last.end_date.strftime("%A, %b %d") %></p>
         </div>
       </div>
       <div class="check-guests">
-        <div class="title">
-          <p style="font-size: 14px"><strong>Number Of Guests</strong></p>
+        <div class="check-in-title">
+          <p style="font-size: 18px"><strong># OF GUESTS</strong></p>
         </div>
           <p style="font-size: 24px"><strong><%= @island.bookings.last.number_of_people %> Guests</strong></p>
-          <h6 class="btn-search btn-search-index btn-island-new">Share the trip with your guests</h6>
+          <h5 class="btn-search btn-search-index btn-island-new btn-guest">Share trip</h5>
       </div>
       </div>
       <div class="host-details">
@@ -54,7 +54,7 @@
       <p>Your host, <strong>Sebastien</strong></p>
       <p style="font-size: 16px" class="text-center">Hi, Thanks for booking my Island 🏝. </p><p style="font-size: 16px" class="text-center">I can't wait to host you here. I'll be sending some more
       info closer to your booking.In the meantime, if you have any questions please send me a message below!</p>
-      <a class="btn-search btn-search-index btn-island-new" href="#"> Message Host</a>
+      <a class="btn-search btn-search-index btn-island-new btn-guest" href="#"> Message Host</a>
       <%= link_to "Send or request money", "#" %>
     </div>
   </div>

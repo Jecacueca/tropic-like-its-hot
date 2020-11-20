@@ -1,7 +1,7 @@
 .checkout {
   justify-content: center;
   display: flex;
-  margin-bottom: 48px;
+  margin-bottom: 0px;
 }
 
 .checkout-details{
@@ -26,6 +26,8 @@
   margin-top: 24px;
   margin-bottom: 24px;
   font-size: 48px !important;
+  border-bottom: 4px solid #E7E7EA;
+  padding-bottom: 20px;
 }
 
 #you-are-going {
@@ -36,15 +38,18 @@
   display: flex;
   height: 70px;
   justify-content: space-between;
+  align-items: center;
   border-bottom: 1px solid grey;
   padding-top: 20px;
   padding-bottom: 20px;
+  margin: 20px 0px;
 }
 
 .check-dates {
   display: flex;
   height: 70px;
   justify-content: space-between;
+  align-items: center;
   border-bottom: 1px solid grey;
   padding-top: 20px;
   padding-bottom: 20px;
@@ -102,12 +107,12 @@ a {
 
 .island-image {
   width: 100%;
-  border-radius: 16px;
+  border-radius: 5px;
 }
 
 .island-image img {
   width: 100%;
-  border-radius: 16px;
+  border-radius: 5px;
 }
 
 .booking-details{
@@ -125,3 +130,42 @@ h6 {
   padding: 0px;
   margin: 0px;
 }
+
+.booking-details h3 {
+  font-size: 29px;
+}
+
+.address-listing p {
+  font-size: 18px;
+  margin-right: 24px;
+}
+
+.address-listing {
+  display: flex;
+  flex-direction: flex-end;
+  justify-content: space-between;
+  margin-left: 25px;
+}
+
+.address-detail p {
+  letter-spacing: 1px;
+  font-weight: bold;
+}
+
+.check-in-title {
+  margin-top: 0px;
+}
+
+.check-in-title p{
+  margin-bottom-bottom: 0px;
+}
+
+.btn-guest {
+  padding: 12px 20px;
+  font-size: 14px;
+}
+
+
+
+
+
