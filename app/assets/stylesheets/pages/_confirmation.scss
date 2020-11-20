@@ -100,10 +100,16 @@ a {
   padding-top: 60px;
 }
 
-#island-image {
+.island-image {
   width: 100%;
   border-radius: 16px;
 }
+
+.island-image img {
+  width: 100%;
+  border-radius: 16px;
+}
+
 .booking-details{
   padding-top: 48px;
   padding-bottom: 24px;
