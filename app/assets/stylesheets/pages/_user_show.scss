@@ -34,12 +34,16 @@
 .row {
   grid-gap: 34px;
   justify-content: center;
+  margin-top: 0px;
 }
 
-.heading, .sub-heading {
+.heading {
   text-align: center;
 }
 
 .dashboard {
   margin-top: 18px;
+}
+.bookings .listings {
+  margin: 20px;
 }
