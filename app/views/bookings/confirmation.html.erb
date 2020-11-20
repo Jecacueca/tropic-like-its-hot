@@ -8,9 +8,9 @@
     <div class="checkout-details">
       <div>
         <% if @island.photos.any? %>
-              <%= link_to cl_image_tag(island.photos.first.key), island_path(island.id) %>
+              <%= link_to cl_image_tag(@island.photos.first.key), island_path(@island), class:"island-image" %>
             <% else %>
-              <img src="https://images.pexels.com/photos/994605/pexels-photo-994605.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940" id="island-image" alt="">
+              <img src="https://images.pexels.com/photos/994605/pexels-photo-994605.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940" class="island-image" alt="">
             <% end %>
       </div>
       <div class="booking-details">
