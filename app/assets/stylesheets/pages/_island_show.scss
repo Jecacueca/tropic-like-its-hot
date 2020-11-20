@@ -14,8 +14,13 @@ h3 {
   margin-bottom: 22px;
 }
 
+.island-info h3 {
+  font-size: 29px;
+  font-weight: bold;
+}
+
 p, .booking-form {
-  font-size: 14px;
+  font-size: 21px;
   font-family: 'Libre Franklin', sans-serif;
   font-weight: 100;
 }
@@ -30,7 +35,7 @@ body {
 
 #image {
   object-fit: cover;
-  height: 600px;
+  height: 450px;
   width: 300px;
 }
 
@@ -45,14 +50,20 @@ body {
 }
 
 .island-info {
-  padding: 0px 16px;
+  padding: 40px 16px 49px 16px;
   text-align: center;
   margin-bottom: 10px;
+  margin-top: 10px;
+  box-shadow: 0 0px 55px rgba(0, 0, 0, 0.2);
+  border-radius: 5px;
+  height: 550px;
 }
 
 #island-description {
   text-align: justify;
-  line-height: 18px;
+  line-height: 31px;
+  letter-spacing: 1px;
+  padding: 16px;
 }
 
 .title {
@@ -61,7 +72,7 @@ body {
 
 form.new_booking {
   input {
-    font-size: 10px;
+    font-size: 20px;
   }
 }
 
@@ -71,9 +82,53 @@ form.new_booking {
 }
 
 .fields {
-  margin: 0 60px;
+  margin: 0 20px;
 }
 
 #price {
-  margin: 30px auto;
+  margin: 30px 0px 60px 0px;
 }
+
+.title {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.title h2 {
+  width: 700px;
+  margin-bottom: 16px;
+  padding-bottom: 26px;
+  border-bottom: 4px solid #E7E7EA;
+}
+
+.title h3 {
+  margin-top: 8px;
+}
+
+.booking-form {
+  padding: 40px 16px;
+  text-align: center;
+  margin-bottom: 10px;
+  margin-top: 10px;
+  box-shadow: 0 0px 55px rgba(0, 0, 0, 0.2);
+  border-radius: 5px;
+  height: 550px;
+}
+
+.booking-form h3 {
+  font-size: 29px;
+  font-weight: bold;
+}
+
+.form-group {
+  padding-top: 33px;
+}
+
+
+.island-info h4 {
+  font-size: 24px;
+  color: #8E004C;
+}
+
+
