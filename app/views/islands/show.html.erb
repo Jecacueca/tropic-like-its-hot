@@ -1,6 +1,6 @@
 <div class="container">
   <div class="title">
-    <h2><%= @island.name.upcase %></h2>
+    <h2 class="text-center"><%= @island.name.upcase %></h2>
     <h3><%= @island.address.upcase%></h3>
   </div>
   <div id="showpage-carousel">
@@ -39,8 +39,8 @@
         <h4 id="price"> | £<%= @island.price %>/NIGHT |</h4>
       <!-- Add if statement for only user to update/delete -->
       <% if current_user == @island.user %>
-        <%= link_to "Update", edit_island_path, class:"btn-search btn-search-index btn-island-new" %>
-        <%= link_to "Delete", island_path(@island), class:"btn-search btn-search-index btn-island-new", method: :delete, data: { confirm: "Are you sure?" } %>
+        <%= link_to "Update", edit_island_path, class:"btn-search btn-search-index btn-island-new btn-smaller", id:"button-update" %>
+        <%= link_to "Delete", island_path(@island), class:"btn-search btn-search-index btn-island-new btn-smaller", id:"button-delete", method: :delete, data: { confirm: "Are you sure?" } %>
     <!--     <%= link_to "Back", islands_path %> -->
       <% else %>
       <!--   <%= link_to "Back", islands_path %> -->
