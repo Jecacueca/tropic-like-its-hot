@@ -1,7 +1,7 @@
 .navbar-lewagon {
   width: 100vw;
   background-color: transparent;
-  mix-blend-mode: normal;
+  // mix-blend-mode: normal;
   font-family: "Montserrat";
   font-style: normal;
   font-weight: bold;
@@ -29,6 +29,9 @@
 
 .nav-link {
   font-size: 10px;
+  &:hover {
+    color: #8E004C;
+  }
 }
 
 .navbar-lewagon .navbar-brand {

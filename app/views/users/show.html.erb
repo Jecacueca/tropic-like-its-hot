@@ -1,41 +1,52 @@
-<div class="dashboard">
-  <h2 class="heading">HELLO <%= current_user.first_name.upcase %>!</h2>
- <div class="bookings">
-    <h3 class="sub-heading">YOUR BOOKINGS</h3>
-    <div class="dashboard-row row">
-      <% current_user.bookings.each do |booking| %>
-        <div class="profile-card col-4">
-          <% if booking.island.photos.any? %>
-            <%= cl_image_tag booking.island.photos.first.key %>
+<div class="container">
+  <div class="dashboard">
+    <h2 class="heading">HELLO <%= current_user.first_name.upcase %>!</h2>
+   <div class="bookings">
+      <h3 class="sub-heading">YOUR BOOKINGS</h3>
+      <div class="row">
+        <% current_user.bookings.each do |booking| %>
+        <div class="col-md-4">
+          <div class="profile-card">
+            <% if booking.island.photos.any? %>
+              <%= cl_image_tag booking.island.photos.first.key %>
+            <% else %>
+              <img src="https://images.pexels.com/photos/994605/pexels-photo-994605.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940" alt="">
+            <% end %>
+            <div class="card-product-infos">
+              <h4><%= link_to booking.island.name.upcase, island_path(booking.island.id) %></h4>
+              <p>Booked from <%= booking.start_date.strftime("%b %d") %> to <%= booking.end_date.strftime(" %b %d") %></p>
+            </div>
+          </div>
+        </div>
+        <% end %>
+        <!-- <div class="col-md-4">
+        </div>
+        <div class="col-md-4">
+        </div> -->
+      </div>
+    </div>
+  </div>
+
+    <div class="listings">
+    <h3 class="sub-heading">YOUR LISTINGS</h3>
+    <div class="row">
+      <% current_user.islands.each do |island| %>
+      <div class="col-md-4">
+        <div class="profile-card">
+          <% if island.photos.any? %>
+            <%= cl_image_tag island.photos.first.key %>
           <% else %>
             <img src="https://images.pexels.com/photos/994605/pexels-photo-994605.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940" alt="">
           <% end %>
-          <div class="card-product-infos">
-            <h4><%= link_to booking.island.name.upcase, island_path(booking.island.id) %></h4>
-            <p>Booked from <%= booking.start_date.strftime("%b %d") %> to <%= booking.end_date.strftime(" %b %d") %></p>
+            <div class="card-product-infos">
+              <h4><%= link_to island.name.upcase, island_path(island.id) %></h4>
+              <p><%= island.address %></p>
+            </div>
           </div>
         </div>
       <% end %>
     </div>
-  </div>
-
-  <div class="listings">
-  <h3 class="sub-heading">YOUR LISTINGS</h3>
-    <div class="dashboard-row row">
-      <% current_user.islands.each do |island| %>
-      <div class="profile-card col-4">
-        <% if island.photos.any? %>
-          <%= cl_image_tag island.photos.first.key %>
-        <% else %>
-          <img src="https://images.pexels.com/photos/994605/pexels-photo-994605.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940" alt="">
-        <% end %>
-        <div class="card-product-infos">
-          <h4><%= link_to island.name.upcase, island_path(island.id) %></h4>
-          <p><%= island.address %></p>
-        </div>
-      </div>
     </div>
-  <% end %>
   </div>
 </div>
 

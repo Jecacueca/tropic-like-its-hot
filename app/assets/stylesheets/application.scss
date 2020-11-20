@@ -18,3 +18,8 @@
 
 @import "pages/login";
 @import "pages/confirmation";
+
+.main-content {
+  min-height: calc(100vh - 138px);
+}
+
