@@ -13,6 +13,11 @@
 //   color: white;
 // }
 
+.navbar {
+  padding-bottom: 0px;
+  padding-top: 0px;
+}
+
 .navbar-absolute {
   position: absolute;
   top: 0;
@@ -78,4 +83,18 @@ justify-content: flex-end;
 
 #navbarSupportedContent a{
 color: white;
+}
+
+.black-links a{
+ color: black !important;
+ margin-bottom: -10px;
+ margin-top: -10px;
+}
+
+.black-links a:hover{
+ color: #8E004C !important;
+}
+
+.black-links {
+  border-bottom: 4px solid white;
 }
