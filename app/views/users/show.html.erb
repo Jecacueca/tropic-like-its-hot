@@ -1,22 +1,25 @@
 <div class="dashboard">
   <h2 class="heading">HELLO <%= current_user.first_name.upcase %>!</h2>
-  <h3 class="sub-heading">YOUR BOOKINGS</h3>
-  <div class="row">
-    <% current_user.bookings.each do |booking| %>
-      <div class="profile-card col-5">
-        <% if booking.island.photos.any? %>
-          <%= cl_image_tag booking.island.photos.first.key %>
-        <% else %>
-          <img src="https://images.pexels.com/photos/994605/pexels-photo-994605.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940" alt="">
-        <% end %>
-        <div class="card-product-infos">
-          <h4><%= link_to booking.island.name.upcase, island_path(booking.island.id) %></h4>
-          <p>Booked from <%= booking.start_date.strftime("%A, %b %d") %> to <%= booking.end_date.strftime("%A, %b %d") %></p>
+ <div class="bookings">
+    <h3 class="sub-heading">YOUR BOOKINGS</h3>
+    <div class="row">
+      <% current_user.bookings.each do |booking| %>
+        <div class="profile-card">
+          <% if booking.island.photos.any? %>
+            <%= cl_image_tag booking.island.photos.first.key %>
+          <% else %>
+            <img src="https://images.pexels.com/photos/994605/pexels-photo-994605.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940" alt="">
+          <% end %>
+          <div class="card-product-infos">
+            <h4><%= link_to booking.island.name.upcase, island_path(booking.island.id) %></h4>
+            <p>Booked from <%= booking.start_date.strftime("%A, %b %d") %> to <%= booking.end_date.strftime("%A, %b %d") %></p>
+          </div>
         </div>
-      </div>
-    <% end %>
+      <% end %>
+    </div>
   </div>
 
+  <div class="listings">
   <h3 class="sub-heading">YOUR LISTINGS</h3>
     <div class="row">
       <% current_user.islands.each do |island| %>
@@ -27,11 +30,12 @@
           <img src="https://images.pexels.com/photos/994605/pexels-photo-994605.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940" alt="">
         <% end %>
         <div class="card-product-infos">
-          <h4><%= link_to island.name, island_path(island.id) %></h4>
+          <h4><%= link_to island.name.upcase, island_path(island.id) %></h4>
           <p><%= island.address %></p>
         </div>
       </div>
     </div>
   <% end %>
+  </div>
 </div>
 
