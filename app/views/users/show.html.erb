@@ -2,9 +2,9 @@
   <h2 class="heading">HELLO <%= current_user.first_name.upcase %>!</h2>
  <div class="bookings">
     <h3 class="sub-heading">YOUR BOOKINGS</h3>
-    <div class="row">
+    <div class="dashboard-row row">
       <% current_user.bookings.each do |booking| %>
-        <div class="profile-card">
+        <div class="profile-card col-4">
           <% if booking.island.photos.any? %>
             <%= cl_image_tag booking.island.photos.first.key %>
           <% else %>
@@ -12,7 +12,7 @@
           <% end %>
           <div class="card-product-infos">
             <h4><%= link_to booking.island.name.upcase, island_path(booking.island.id) %></h4>
-            <p>Booked from <%= booking.start_date.strftime("%A, %b %d") %> to <%= booking.end_date.strftime("%A, %b %d") %></p>
+            <p>Booked from <%= booking.start_date.strftime("%b %d") %> to <%= booking.end_date.strftime(" %b %d") %></p>
           </div>
         </div>
       <% end %>
@@ -21,9 +21,9 @@
 
   <div class="listings">
   <h3 class="sub-heading">YOUR LISTINGS</h3>
-    <div class="row">
+    <div class="dashboard-row row">
       <% current_user.islands.each do |island| %>
-      <div class="profile-card">
+      <div class="profile-card col-4">
         <% if island.photos.any? %>
           <%= cl_image_tag island.photos.first.key %>
         <% else %>
