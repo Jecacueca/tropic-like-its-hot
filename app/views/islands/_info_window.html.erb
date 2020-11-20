@@ -1,0 +1,8 @@
+<h2><%= island.name.upcase %></h2>
+<p><%= island.address %></p>
+<% if island.photos.any? %>
+  <%= link_to cl_image_tag(island.photos.first.key), island_path(island.id), class: "thumbnail-image" %>
+<% else %>
+  <img class="thumbnail-image" src="https://images.pexels.com/photos/994605/pexels-photo-994605.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940" alt="">
+<% end %>
+
