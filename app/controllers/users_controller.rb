@@ -3,9 +3,7 @@ class UsersController < ApplicationController
     if !current_user
       redirect_to root_path
     end
-    @bookings = Booking.all
-    current_user.bookings = @bookings
-    # @islands = Island.all
-    # current_user.islands = @islands
-  end
+#     @bookings = Booking.all << This wasn't doing anything
+    @bookings = current_user.bookings
+    @islands = current_user.islands
 end
